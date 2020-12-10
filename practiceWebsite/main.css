@@ -52,10 +52,53 @@
 
 .container {
     display: block;
+    height: 100px;
 }
 
 #Q2text {
     font-size: 60px;
     color: red;
+}
+
+#Q3text {
+    font-size: 60px;
+    margin: 0;
+    color: blue;
+}
+
+#Q4text {
+    font-size: 60px;
+    margin: 0;
+    color: blue;
+}
+
+.row {
+    margin: 0 auto;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+    
+}
+
+.col-2 {
+    float: left;
+    width: 35%;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+
+.bdred {
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+.bdgreen {
+    border: 1px solid green;
+    border-radius: 5px;
 }
 
