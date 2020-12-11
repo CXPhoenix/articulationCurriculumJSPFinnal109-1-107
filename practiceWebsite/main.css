@@ -1,35 +1,50 @@
+/*
 .header {
     background-image: url("watch_mac.jpg");
-    /* The image used - important! */
+    // The image used - important! 
     background-size: cover;
     position: relative;
-    /* Needed to position the cutout text in the middle of the image */
+    // Needed to position the cutout text in the middle of the image
     height: 300px;
-    /* Some height */
+    // Some height 
+}
+*/
+
+.header{
+    display: block;
+    width: auto;
+    height: auto;
 }
 
+/*
 .text {
     background-color: white;
     color: black;
     font-size: 10vw;
-    /* Responsive font size */
+    // Responsive font size
     font-weight: bold;
     margin: 0 auto;
-    /* Center the text container */
+    // Center the text container 
     padding: 10px;
     width: 50%;
     text-align: center;
-    /* Center text */
+    // Center text 
     position: absolute;
-    /* Position text */
+    // Position text 
     top: 50%;
-    /* Position text in the middle */
+    // Position text in the middle
     left: 50%;
-    /* Position text in the middle */
+    // Position text in the middle
     transform: translate(-50%, -50%);
-    /* Position text in the middle */
+    // Position text in the middle
     mix-blend-mode: screen;
-    /* This makes the cutout text possible */
+    // This makes the cutout text possible
+}
+*/
+
+.text {
+    font-size: 5vw;
+    border:5px solid black;
 }
 
 .question {
@@ -82,7 +97,7 @@
     content: "";
     display: table;
     clear: both;
-    
+
 }
 
 .col-2 {
@@ -101,4 +116,3 @@
     border: 1px solid green;
     border-radius: 5px;
 }
-

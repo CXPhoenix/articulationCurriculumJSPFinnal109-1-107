@@ -1,14 +1,16 @@
 <link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="highlight/styles/default.css" />
+
 <title>109-1 107 期末考練習用網站</title>
 
 <h1 align="center">本網站為期末考練習用，與真實考試環境類似，請好好練習!</h1>
 
 
 <h2>第一題</h2>
-<p class="question">請把圖片中的文字改為 well done</p>
+<p class="question">請把下方 Hello 改為 well done</p>
 
 <div class="header">
-    <div class="text" id="Q1text">hello</div>
+    <div class="text" align="center" id="Q1text">hello</div>
 </div>
 <button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
 <div class="hint">
@@ -67,14 +69,32 @@
 
 
 <h3>第五題</h3>
-<p class="question"></p>
+<p class="question">請試著讓紅框中的綠字與綠框中的紅字交換(包含顏色一起交換喔!)</p>
 <dev class="container">
     <div class="row">
         <div class="col-2 bdred">
-            <p align="center" style="font-size: 30px;color: green">這是紅色字喔～</p>
+            <p id="Q5textR" align="center" style="font-size: 30px;color: green">這是紅色字喔～</p>
         </div>
         <div class="col-2 bdgreen">
-            <p align="center" style="font-size: 30px;color: red">這是綠色字喔～</p>
+            <p id="Q5textG" align="center" style="font-size: 30px;color: red">這是綠色字喔～</p>
+        </div>
+    </div>
+    <div class="row">
+        <div align="center" style="width: 70%; margin-top: 1em;">
+            <button id="Q5btn" type="button">SWAP THE COLOR..</button>
         </div>
     </div>
 </dev>
+<br />
+<div style="display: block;margin-top: 1em;">
+    <button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
+    <div class="hint">
+
+    </div>
+</div>
+<div class="blank">
+</div>
+
+
+<script src="highlight/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
