@@ -87,6 +87,13 @@
     color: blue;
 }
 
+#Q6div {
+    display: none;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 30px;
+}
+
 .row {
     margin: 0 auto;
     margin-top: 5px;

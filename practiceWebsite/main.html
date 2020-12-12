@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="main.css" />
+<link rel="stylesheet" href="css/main.css" />
 <link rel="stylesheet" href="highlight/styles/default.css" />
 
 <title>109-1 107 期末考練習用網站</title>
@@ -12,9 +12,13 @@
 <div class="header">
     <div class="text" align="center" id="Q1text">hello</div>
 </div>
-<button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
-<div class="hint">
-使用Chrome的F12找到Hello的Id，接著使用 <pre><code>document.getElementById()</code></pre> 來處理文字。
+<button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint1')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+<div class="hint" id="hint1">
+    使用Chrome的F12找到Hello的Id，接著使用
+    <pre><code class="javascript">document.getElementById().innerHTML</code></pre> 來處理文字。<br /><br />
+    此題答案:
+    <pre><code class="javascript">document.getElementById("Q1text").innerHTML = "well done";
+</code></pre>
 </div>
 <div class="blank">
 </div>
@@ -22,12 +26,16 @@
 <h2>第二題</h2>
 <p class="question">請試著把下方紅色的字換成 容易 兩個字</p>
 <div class="container">
-    <p align="center" style="font-size: 3em;">這件事情真的很<span id="Q2text">難</span>想像</p>
+    <p align="center" style="font-size: 3em; border: 3px solid;">這件事情真的很<span id="Q2text">難</span>想像</p>
 </div>
 
-<button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
-<div class="hint">
+<button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint2')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+<div class="hint" id="hint2">
+    跟上題一樣，找到「難」這個字的id，接著使用
+    <pre><code class="javascript">document.getElementById().innerHTML</code></pre>來處理內容<br /><br />
 
+    解答：
+    <pre><code class="javascript">document.getElementById("Q2text").innerHTML = "容易";</code></pre>
 </div>
 <div class="blank">
 </div>
@@ -35,15 +43,24 @@
 <h3>第三題</h3>
 <p class="question">請試著讓按鈕按下後，就讓藍色的字變成 不告訴你咧</p>
 <div class="container">
-    <div style="display: block; width: 60%; height: 2em; margin: 0px auto; margin-bottom: 3em;">
+    <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
         <p align="center" id="Q3text">告訴你一個秘密</p>
         <button id="Q3btn" type="button">按一下改變</button>
     </div>
 </div><br />
 <div style="display: block;margin-top: 1em;">
-    <button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
-    <div class="hint">
-
+    <button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint3')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+    <div class="hint" id="hint3">
+        1. 找到按鈕的id，並設置變數
+        <pre><code class="javascript">var btn = document.getElementById()</code></pre>
+        2. 接下來確認藍色字的id
+        3. 最後使用指令讓網頁知道按下按鈕後的事情。<pre><code class="javascript">btn.onclick = function() {你指定按下按鈕後會發生的事情寫再者裡喔！};</code></pre><br /><br />
+        解答：
+        <pre><code class="javascript">var btn = document.getElementById("Q3btn");
+btn.onclick = function() {
+    document.getElementById("Q3text").innerHTML = "不告訴你咧";
+};
+        </code></pre>
     </div>
 </div>
 <div class="blank">
@@ -53,15 +70,21 @@
 <h3>第四題</h3>
 <p class="question">請試著讓按鈕按下後，就讓藍色的字變成 是個變態</p>
 <div class="container">
-    <div style="display: block; width: 60%; height: 2em; margin: 0px auto; margin-bottom: 3em;">
+    <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
         <p align="center" style="color: brown;font-size: 50px;margin: 0;">告訴你<span id="Q4text">一個秘密</span></p>
         <button id="Q4btn" type="button">按一下改變</button>
     </div>
 </div><br />
 <div style="display: block;margin-top: 1em;">
-    <button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
-    <div class="hint">
-
+    <button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint4')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+    <div class="hint" id="hint4">
+與上一題相同，找到按鈕的id、找到要改的文字的id，最後寫下按下按鈕後的事件即可。<br /><br />
+解答：
+<pre><code class="javascript">var btn = document.getElemnetById("Q4btn");
+btn.onclick = function() {
+    document.getElementById("Q4text").innerHTML = "是個變態";
+};
+</code></pre>
     </div>
 </div>
 <div class="blank">
@@ -87,14 +110,53 @@
 </dev>
 <br />
 <div style="display: block;margin-top: 1em;">
-    <button align="center" type="button" class="hintbtn">按這裡開啟hint</button>
-    <div class="hint">
-
+    <button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint5')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+    <div class="hint" id="hint5">
+1. 找到按鈕的id
+2. 確認綠色字和紅色字的id
+3. 對兩個顏色字各使用一次指令<pre><code class="javascript">document.getElementById().style.color</code></pre>去改變字的顏色
+<br /><br />
+解答：<pre><code class="javascript">var btn = document.getElementById("Q5btn");
+btn.onclick = function() {
+    document.getElementById("Q5textR").style.color = "red";
+    document.getElementById("Q5textG").style.color = "green";
+};
+</code></pre>
     </div>
 </div>
 <div class="blank">
 </div>
 
+<h3>第六題</h3>
+<p class="question">請試著按下按鍵讓隱藏起來的文字顯示出來</p>
+<dev class="container">
+   <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
+   <div style="margin: 5px auto; text-align: center;">
+   <button align="center" id="Q6btn" type="button" style="margin: 1px auto;">找到隱藏起來的文字</button>
+   </div>
+    <div id="Q6div">
+        哈你發現我了
+    </div>
+    </div>
+</dev>
+<br />
+<div style="display: block;margin-top: 1em;">
+    <button align="center" type="button" class="hintbtn" onclick="hintSwitch(event, 'hint6')">按這裡<span class="hintSwitchStr">開啟</span>hint</button>
+    <div class="hint" id="hint6">
+1. 找到隱藏起來的文字與id（利用按下F12來尋找喔～）
+2. 找到按鈕並且跟上題一樣寫下按下按鈕後的事件。
+3. 要讓文字顯現出來的指令是：<pre><code class="javascript">document.getElementById().style.display = "block";</code></pre>順帶一提，讓文字消失的指令是：<pre><code class="javascript">document.getElementById().style.display = "none";</code></pre><br /><br />
+解答：<pre><code class="javascript">var btn = document.getElementById("Q6btn")
+btn.onclick = function() {
+   document.getElementById("Q6div").style.display = "block";
+};</code></pre>
+    </div>
+</div>
+<div class="blank">
+</div>
 
+<script src="js/main.js"></script>
 <script src="highlight/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
