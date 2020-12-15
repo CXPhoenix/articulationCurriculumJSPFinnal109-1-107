@@ -1,0 +1,122 @@
+<meta charset="utf-8" />
+<!--<link rel="stylesheet" href="../static/css/main.css" />-->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+
+<title>109-1 107 期末考</title>
+
+
+<div id="finall">
+    <h2>第一題</h2>
+    <p class="question">共兩個子題，第一子題為15分，第二子題為5分，共計20分</p>
+    <div class="question">
+        <ol>
+            <li>請試著把下圖中 Hello 字樣換成 good for you。</li>
+            <li>請試著把下圖中的圖片替換為 https://sunshinecity.jp/archives/005/201902/344cd227d493ce87cbd093ff3012c4cd.jpg 的圖片。</li>
+        </ol>
+    </div>
+
+    <div id="header">
+        <div class="text" align="center" id="Q1text">hello</div>
+    </div>
+
+    <div class="blank">
+    </div>
+
+    <h2>第二題</h2>
+    <p class="question">共兩個子題，第一子題為10分，第二子題為10分，共計20分</p>
+    <div class="question">
+        <ol>
+            <li>請試著把下方紅色的字換成 容易 兩個字。</li>
+            <li>請試著找到隱藏的元素，並且利用js將其顯示出來。</li>
+        </ol>
+    </div>
+    <div class="container">
+        <p align="center" style="font-size: 3em; border: 3px solid;">這件事情真的很<span id="Q2text">難</span>想像</p>
+        <div id="Q2Hidden">恭喜你找到啦!</div>
+    </div>
+
+    <div class="blank">
+    </div>
+
+    <h3>第三題</h3>
+    <p class="question">共兩個子題，第一子題為15分，第二子題為5分，共計20分</p>
+    <div class="question">
+        <ol>
+            <li>請試著在按鈕按下後，就讓藍色的字變成 來咬我啊。</li>
+            <li>請試著在按下按鈕後讓藍色的 來咬我啊 變成紅色的</li>
+        </ol>
+    </div>
+    <div class="container">
+        <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
+            <p align="center" id="Q3text">告訴你一個秘密</p>
+            <button id="Q3btn" type="button">按一下改變</button>
+        </div>
+    </div>
+    <div class="blank">
+    </div>
+
+
+    <h3>第四題</h3>
+    <p class="question">共兩個子題，第一子題為15分，第二子題為5分，共計20分</p>
+    <div class="question">
+        <ol>
+            <li>請試著在按鈕按下後，就讓藍色的字變成紅色的 被我騙了。</li>
+            <li>請試著再一次按下按鈕後讓紅色的字變成黑色的字的</li>
+        </ol>
+        hint: 要把這題全部拿分，就要讓按鈕按兩下後有不同的反應喔!
+    </div>
+    <div class="container">
+        <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
+            <p align="center" style="color: brown;font-size: 50px;margin: 0;"><span id="Q4text1">告訴你</span><span id="Q4text2">一個秘密</span></p>
+            <button id="Q4btn" type="button">按一下改變</button>
+        </div>
+    </div>
+    <div class="blank">
+    </div>
+
+
+    <h3>第五題</h3>
+    <p class="question">共兩個子題，第一子題為15分，第二子題為5分，共計20分</p>
+    <div class="question">
+        <ol>
+            <li>請試著讓紅框中的綠字與綠框中的紅字交換(包含顏色一起交換喔!)</li>
+            <li>請試著再一次按下按鈕後讓所有字變成黑色的字，文字皆變為 這是黑色字喔~</li>
+        </ol>
+        hint: 要把這題全部拿分，就要讓按鈕按兩下後有不同的反應喔!
+    </div>
+    <dev class="container">
+        <div class="row">
+            <div class="col-2 bdred">
+                <p id="Q5textR" align="center" style="font-size: 30px;color: green">這是紅色字喔～</p>
+            </div>
+            <div class="col-2 bdgreen">
+                <p id="Q5textG" align="center" style="font-size: 30px;color: red">這是綠色字喔～</p>
+            </div>
+        </div>
+        <div class="row">
+            <div align="center" style="width: 70%; margin-top: 1em;">
+                <button id="Q5btn" type="button">SWAP THE COLOR..</button>
+            </div>
+        </div>
+    </dev>
+
+    <div class="blank">
+    </div>
+
+    <h3>加分題</h3>
+    <p class="question">請試著利用js讓下方按鈕變成可以將隱藏文件顯示出來，再按一次可以將文件再次隱藏起來。<br />本題 <span class="important">30</span> 分</p>
+    hint: 要拿到全部分數，按鈕必須按第一次和第二次產生不同效果喔~
+    <dev class="container">
+        <div style="display: block; width: 60%; height: 7em; margin: 0px auto; margin-bottom: 3em; border: 3px solid;">
+            <div style="margin: 5px auto; text-align: center;">
+                <button align="center" id="Q6btn" type="button" style="margin: 1px auto;">打開隱藏的文字</button>
+            </div>
+            <div id="Q6div">
+                再一步，你就可以拿到加分的 <span class="important">30</span> 分囉!
+            </div>
+        </div>
+    </dev>
+
+    <div class="blank">
+    </div>
+</div>
